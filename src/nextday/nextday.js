@@ -18,13 +18,13 @@ function NextDay({ sky, max, min , date}) {
 
   return (
     <>
-      <div className="flex  md:flex-col items-center justify-around fivecard text-white md:h-[270px] col-span-5 md:col-span-1">
-        <p className="text-xl pt-2 ">{date}</p>
+      <div className="flex  lg:flex-col items-center justify-around fivecard text-white lg:h-[270px] col-span-5 lg:col-span-1">
+        <p className="text-lg xl:text-xl pt-2 ">{date}</p>
         <hr className="w-4/5 h-[2px] bg-white opacity-20 hidden" />
         <p className="text-5xl pt-4">{iconplacer()}</p>
-        <span className="p-4  md:h-1/2 flex flex-col justify-between ">
-          <p className="md:text-2xl flex"><span className="px-2 text-green-400 text-3xl"><IoMdArrowDropup /></span>{max}</p>
-          <p className="md:text-2xl flex"><span className="px-2 text-red-400 text-3xl"><IoMdArrowDropdown /></span>{min}</p>
+        <span className="p-4  lg:h-1/2 flex flex-col justify-between ">
+          <p className="xl:text-2xl text-lg flex"><span className="px-2 text-green-400 text-3xl"><IoMdArrowDropup /></span>{max}</p>
+          <p className="xl:text-2xl text-lg flex"><span className="px-2 text-red-400 text-3xl"><IoMdArrowDropdown /></span>{min}</p>
         </span>
       </div>
     </>

@@ -111,20 +111,20 @@ function App() {
   return (
     <>
       <Getlocation getlinkfunc={geturl} getweather={getweather} showerror={showerror} getfivedays={getfivedays}/>
-      <div className="md:flex justify-center md:h-screen h-[1900px] index-2 background bg-black flex-col items-center">
+      <div className="lg:flex justify-center lg:h-screen h-[1900px] index-2 background bg-black flex-col items-center">
       {/* {isdenied ? <DropAlert/> : null} */}
-        <div className="md:h-[750px] h-full md:container containerr w-ful self-center md:rounded-2xl p-[15px] grid md:grid-cols-5 grid-cols-2 grid-rows-4 grid-rows-6 md:grid-rows-4 gap-4 [&>div]:rounded-xl">
+        <div className="lg:h-[750px] h-full lg:container containerr w-ful self-center lg:rounded-2xl p-[15px] grid lg:grid-cols-5 grid-cols-2 grid-rows-4 grid-rows-6 lg:grid-rows-4 gap-4 [&>div]:rounded-xl">
           <Citysection
             temp={temperture.temp}
             city={condition.name}
             timer={currentdate}
             img={url}
           />
-          <div className="md:col-span-2 md:col-start-1 row-span-2 col-span-5 row-span-1 md:row-span-2">
+          <div className="lg:col-span-2 lg:col-start-1 row-span-2 col-span-5 row-span-1 lg:row-span-2">
             <p className="p-2.5 px-3 text-lg font-semibold text-white">
               Todays highlights
             </p>
-            <div className=" grid gap-2 md:grid-cols-3 md:grid-rows-2 grid-rows-6 row-span-1 [&>div]:rounded-xl [&>div]:p-[10px] p-1 h-4/5 ">
+            <div className=" grid gap-2 lg:grid-cols-3 lg:grid-rows-2 grid-rows-6 row-span-1 [&>div]:rounded-xl [&>div]:p-[10px] p-1 h-4/5 ">
               <InfoCard title="Sky" info={main} className="text-white" />
               <InfoCard
                 title="Feels like"
@@ -147,7 +147,7 @@ function App() {
             getfivedays={getfivedays}
             load={loadsetter}
           />
-          <div className="md:col-span-3 md:row-span-2  col-span-5 ">
+          <div className="lg:col-span-3 lg:row-span-2  col-span-5 ">
             <p className="p-2.5 text-lg text-white font-semibold px-3">
               Next five days
             </p>
@@ -184,10 +184,6 @@ function App() {
               />
             </div>
           </div>
-          {/* <div className="col-span-3 md:row-start-2 col-end-6 text-center md:static bottom-[1450px] bg-black relative md:block">
-                <p className=" md:text-8xl text-white header text-6xl md:pl-[30px]">WEATHER WISE</p>
-                <p className="">Please use VPN for better experience</p>
-          </div> */}
         </div>
       </div>
     </>
