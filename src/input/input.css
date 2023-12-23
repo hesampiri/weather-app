@@ -1,0 +1,11 @@
+.button{
+    background: rgba(0, 0, 0, 0.438);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(255, 255, 255, 0.078);
+}
+.button:hover{
+    background: rgba(64, 53, 213, 0.58);
+}

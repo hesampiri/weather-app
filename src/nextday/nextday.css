@@ -1,0 +1,8 @@
+.fivecard{
+    background: rgba(17, 17, 17, 0.493);
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(134, 134, 134, 0.311);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(17, 17, 17, 0.31);
+}
