@@ -44,23 +44,23 @@ function Input({ getlinkfunc, getweather , getfivedays ,load}) {
   }
 
   return (
-    <div className=" col-start-1 md:col-start-3 row-start-1 col-span-5 col-end-6 md:row-span-2 md:row-start-1 rounded flex items-center justify-between flex-col">
-      <div className="flex justify-end w-full" >
+    <div className=" col-start-1 lg:col-start-3 row-start-1 col-span-5 col-end-6 lg:row-span-2 lg:row-start-1 rounded flex items-center flex-col  lg:border lg:border-t-0 lg:border-r-0">
+      <div className="flex justify-end w-full h-1/3" >
         <input
           type="text"
-          className="md:w-4/6 w-4/5 px-[10px] rounded-xl mx-2 text-gray-500 h-[40px]"
+          className="lg:w-4/6 w-4/5 px-[10px] rounded-xl mx-2 text-gray-500 h-[40px]"
           value={inputvalue}
           onChange={(e) => {
             setinputvalue(e.target.value);
           }}
           placeholder="Search for any city you want here"
         />
-        <button className="md:px-3 rounded-lg text-white text-2xl button md:w-[50px] w-1/5 pl-4 h-[40px]" onClick={searching}>
+        <button className="lg:px-3 rounded-lg text-white text-2xl button lg:w-[50px] w-1/5 pl-4 h-[40px]" onClick={searching}>
           <IoMdSearch />
         </button>
       </div>
-      <div className="text-center pb-4">
-        <h1 className=" header md:text-8xl text-white text-6xl">WEATHER WISE</h1>
+      <div className="text-center pb-4 container">
+        <h1 className=" header lg:text-8xl text-white text-5xl">WEATHER WISE</h1>
         <p>Please use VPN for better experience</p>
       </div>
     </div>
