@@ -1,5 +1,3 @@
-// import Loading from "../loading/loading"; // 
-
 function Citysection({ temp, city, timer, img }) {
 
   const stylist = {

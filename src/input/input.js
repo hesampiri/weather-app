@@ -5,14 +5,12 @@ import { IoMdSearch } from "react-icons/io";
 
 function Input({ getlinkfunc, getweather , getfivedays ,load}) {
   const [inputvalue, setinputvalue] = useState("");
-  // const[imgurl , setimgurl] = useState('')
 
   function searching() {
     axios(
       `https://api.openweathermap.org/data/2.5/weather?q=${inputvalue}&units=metric&appid=0ca3b575491069905863a68ac926f000`
     ).then((res) => {
       const data = res.data;
-      // console.log(data)
       getweather({ ...data });
 
       axios(
@@ -20,7 +18,6 @@ function Input({ getlinkfunc, getweather , getfivedays ,load}) {
       )
         .then((res) => {
           const img = res.data.results[0];
-          // setimgurl(img.urls.regular)
           getlinkfunc(img.urls.regular);
           console.log("shod").catch((err) => console.log(err));
         })
@@ -54,6 +51,7 @@ function Input({ getlinkfunc, getweather , getfivedays ,load}) {
             setinputvalue(e.target.value);
           }}
           placeholder="Search for any city you want here"
+          required
         />
         <button className="lg:px-3 rounded-lg text-white text-2xl button lg:w-[50px] w-1/5 pl-4 h-[40px]" onClick={searching}>
           <IoMdSearch />

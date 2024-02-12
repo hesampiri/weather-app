@@ -18,8 +18,8 @@ function NextDay({ sky, max, min , date}) {
 
   return (
     <>
-      <div className="flex  lg:flex-col items-center justify-around fivecard text-white lg:h-[270px] col-span-5 lg:col-span-1">
-        <p className="text-lg xl:text-xl pt-2 ">{date}</p>
+      <div className="flex  lg:flex-col items-center justify-around fivecard text-white lg:h-[270px] col-span-5 lg:col-span-1 my-2 md:my-0">
+        <p className="text-lg pt-2 uppercase">{date}</p>
         <hr className="w-4/5 h-[2px] bg-white opacity-20 hidden" />
         <p className="text-5xl pt-4">{iconplacer()}</p>
         <span className="p-4  lg:h-1/2 flex flex-col justify-between ">

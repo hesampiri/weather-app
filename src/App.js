@@ -24,9 +24,17 @@ function App() {
   const [isloading, setisloading] = useState(true);
   const [fivedays, setfivedays] = useState([]);
   const [fivetemp, setfivetemp] = useState([]);
-  const[isdenied , setisdenied] = useState(false);
+  const [isdenied, setisdenied] = useState(false);
 
-  const dayofweak = ["sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const dayofweak = [
+    "sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
   useSkipFirstRender(() => {
     settemperture({ ...condition.main });
@@ -43,7 +51,7 @@ function App() {
       minute: "numeric",
       hour12: true,
     });
-    
+
     const dayofweak = ["Sun", "Mon", "Teu", "Wed", "Thu", "Fri", "Sat"];
     return `${dayofweak[day]} , ${time}`;
   }
@@ -82,27 +90,13 @@ function App() {
     setfivetemp(temp);
   }
 
-  function loadsetter(){
-    seturl("")
+  function loadsetter() {
+    seturl("");
   }
 
-  function showerror(){
-    setisdenied(true)
+  function showerror() {
+    setisdenied(true);
   }
-
-  // }
-  // useEffect(()=>{
-  //   loadingscreen()
-  // },[])
-
-  // function loadingscreen(){
-  //   if(isloading){
-  //     // <Loading/>
-  //     console.log("loading")
-  //   }else{
-  //     null
-  //   }
-  // }
 
   useEffect(() => {
     sky.map((item) => setmain(item.main));
@@ -110,9 +104,14 @@ function App() {
 
   return (
     <>
-      <Getlocation getlinkfunc={geturl} getweather={getweather} showerror={showerror} getfivedays={getfivedays}/>
-      <div className="lg:flex justify-center lg:h-screen h-[1900px] index-2 background bg-black flex-col items-center">
-      {/* {isdenied ? <DropAlert/> : null} */}
+      <Getlocation
+        getlinkfunc={geturl}
+        getweather={getweather}
+        showerror={showerror}
+        getfivedays={getfivedays}
+      />
+      <div className="lg:flex justify-center lg:h-screen h-[2000px] index-2 background bg-black flex-col items-center">
+        {isdenied ? <DropAlert /> : null}
         <div className="lg:h-[750px] h-full lg:container containerr w-ful self-center lg:rounded-2xl p-[15px] grid lg:grid-cols-5 grid-cols-2 grid-rows-4 grid-rows-6 lg:grid-rows-4 gap-4 [&>div]:rounded-xl">
           <Citysection
             temp={temperture.temp}
@@ -135,10 +134,20 @@ function App() {
                 }
                 sign={"deg"}
               />
-              <InfoCard title="Sunrise" info={sunrise == 'Invalid Date'? null : sunrise} />
+              <InfoCard
+                title="Sunrise"
+                info={sunrise == "Invalid Date" ? null : sunrise}
+              />
               <InfoCard title="Humidity" info={temperture.humidity} sign="%" />
-              <InfoCard title="Wind speed" info={wind.speed ?Math.round(wind.speed):null} sign={"km/h"}/>
-              <InfoCard title="Sunset" info={sunset == 'Invalid Date'? null : sunset} />
+              <InfoCard
+                title="Wind speed"
+                info={wind.speed ? Math.round(wind.speed) : null}
+                sign={"km/h"}
+              />
+              <InfoCard
+                title="Sunset"
+                info={sunset == "Invalid Date" ? null : sunset}
+              />
             </div>
           </div>
           <Input
@@ -191,4 +200,3 @@ function App() {
 }
 
 export default App;
-
