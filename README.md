@@ -1,2 +1,2 @@
 # weather-app
-weather web application using React and Tailwind
+weather web application using React.Js and Tailwind
